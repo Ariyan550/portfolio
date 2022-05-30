@@ -1,0 +1,24 @@
+{
+  "logoName": "ariyan rumi",
+  "navbarItem": {
+    "home": "home",
+    "about": "about",
+    "services": "services",
+    "portfolio": "portfolio",
+    "contact": "contact"
+  },
+  "navbarLink": {
+    "home": "#",
+    "about": "#",
+    "services": "#",
+    "portfolio": "#",
+    "contact": "#"
+  },
+  "hero": {
+    "title": "ARIYAN RUMI",
+    "bio": "I Am A Ariyan Rumi.I Am A Full Stack Web Developer,Youtuber,Freelancher",
+    "hire": "https://www.fiverr.com/ariyan_rumi?up_rollout=true",
+    "cv": "https://drive.google.com/file/d/1GUhzdTTfko7kZUjX50Kb88NbUdmrupcV/view?usp=sharing",
+    "img": "../img/hero.jpg"
+  }
+}

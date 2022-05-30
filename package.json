@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-personal",
+  "version": "1.0.0",
+  "description": "this is a modern portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss build ./src/style.css -o ./css/style.css -w"
+  },
+  "author": "Ariyan Rumi",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.14"
+  }
+}
