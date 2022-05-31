@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./vendor/css/jquery.animatedheadline.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Portfolio</title>
   </head>
   <body onload="loadData()">
     <!-- start header section -->
     <header class="header" id="header">
-      <h2 class="logo"></h2>
+      <h2 class="logo" data-aos="fade-up"></h2>
 
-      <nav class="navbar-list">
+      <nav class="navbar-list" data-aos="fade-up">
         <li class="navbar-item">
           <a href="#" class="navbar-link home-link"></a>
         </li>
@@ -34,19 +36,45 @@
 
     <!-- start hero section -->
     <section class="hero">
+      <div id="particles-js"></div>
       <div class="container">
         <div class="row">
           <div class="colHeroOne">
             <div class="heroTitle">
-              <p>THIS IS ME</p>
-              <h1 class="heroHeading"></h1>
-              <p class="bio"></p>
+              <p data-aos="fade-up" data-aos-duration="1500">THIS IS ME</p>
+              <!-- animation headline -->
+
+              <div class="selector">
+                <h1 class="ah-headline">
+                  <span class="heroHeading"></span>
+                  <span class="ah-words-wrapper">
+                    <b class="is-visible">Web Designer</b>
+                    <b>Web Developer</b>
+                    <b>MERN Developer</b>
+                  </span>
+                </h1>
+              </div>
+              <!-- end animation headline -->
+              <p data-aos="fade-up" data-aos-duration="1500" class="bio"></p>
+
               <div class="btn-group">
-                <a href="" target="_blank" class="btn hire">
+                <a
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  href=""
+                  target="_blank"
+                  class="btn hire"
+                >
                   HIRE ME
                   <ion-icon class="sendIcon" name="send-outline"></ion-icon>
                 </a>
-                <a href="" target="_blank" class="btn cv">
+                <a
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  href=""
+                  target="_blank"
+                  class="btn cv"
+                >
                   DOWNLOAD CV
                   <ion-icon
                     class="downloadIcon"
@@ -58,15 +86,72 @@
           </div>
           <div class="colHeroTwo">
             <div class="heroImg">
-              <img class="heroImage" src="" alt="hero image" />
+              <img
+                data-aos="fade-up"
+                data-aos-duration="1500"
+                class="heroImage"
+                src=""
+                alt="hero image"
+              />
             </div>
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0099ff"
+          fill-opacity="1"
+          d="M0,96L48,85.3C96,75,192,53,288,64C384,75,480,117,576,165.3C672,213,768,267,864,282.7C960,299,1056,277,1152,224C1248,171,1344,85,1392,42.7L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
     </section>
     <!-- end hero section -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- position fixed element -->
+
+    <div class="scrollTop">
+      <div class="arrowTop">
+        <ion-icon class="arrowIcon" name="chevron-up-outline"></ion-icon>
+      </div>
+    </div>
 
     <!-- third party library cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -75,7 +160,21 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./vendor/js/particles.min.js"></script>
+    <script src="./vendor/js/jquery.animatedheadline.min.js"></script>
+    <script src="./vendor/js/hero.js"></script>
     <!-- javascript file links -->
     <script src="./js/index.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(function () {
+          $(".selector").animatedHeadline({
+            animationType: "loading-bar",
+          });
+        });
+      });
+      AOS.init();
+    </script>
   </body>
 </html>

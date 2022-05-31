@@ -72,6 +72,27 @@ li {
   margin: 0 auto;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--helper);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--helper);
+}
 /*=============================
  style header section start
  =============================*/
@@ -81,6 +102,17 @@ li {
   justify-content: space-between;
   padding: 2rem 4.8rem;
   background-color: var(--bg);
+  height: 70px;
+  width: 100%;
+  transition: position 0.5s linear;
+}
+
+.header.active {
+  position: fixed;
+  height: 70px;
+  z-index: 1;
+  top: 0px;
+  transition: position 0.5s ease-in-out;
 }
 
 .navbar-list {
@@ -123,6 +155,8 @@ li {
 
 .hero {
   padding: 8rem 0rem 8rem 0rem;
+  height: 500px;
+  position: relative;
 }
 .row {
   display: flex;
@@ -186,3 +220,76 @@ li {
   font-size: 1.7rem;
   margin-left: 0.5rem;
 }
+
+#particles-js {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+}
+
+/*=============================
+ position fixed element
+ =============================*/
+
+.scrollTop {
+  position: fixed;
+  right: 4rem;
+  bottom: 6rem;
+  background-color: #8490ff;
+  padding: 0.5rem;
+  -webkit-animation-name: scrolltop;
+          animation-name: scrolltop;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+}
+.scrollTop.active {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 7rem;
+}
+
+.scrollTop .arrowIcon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+@-webkit-keyframes scrolltop {
+  0% {
+    border-radius: 1.5rem 0rem 0rem 0rem;
+  }
+  25% {
+    border-radius: 0rem 1.5rem 0rem 0rem;
+  }
+  50% {
+    border-radius: 0rem 0rem 1.5rem 0rem;
+  }
+  75% {
+    border-radius: 0rem 0rem 0rem 1.5rem;
+  }
+}
+
+@keyframes scrolltop {
+  0% {
+    border-radius: 1.5rem 0rem 0rem 0rem;
+  }
+  25% {
+    border-radius: 0rem 1.5rem 0rem 0rem;
+  }
+  50% {
+    border-radius: 0rem 0rem 1.5rem 0rem;
+  }
+  75% {
+    border-radius: 0rem 0rem 0rem 1.5rem;
+  }
+}
+
+/*=============================
+ position fixed element
+ =============================*/
